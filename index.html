@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solo Vivo: Conservação e Produtividade Agrícola Sustentável</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <div class="accessibility-bar" role="complementary" aria-label="Ferramentas de Acessibilidade">
+        <button id="btn-diminuir-fonte" title="Diminuir Fonte" aria-label="Diminuir tamanho da fonte">A-</button>
+        <button id="btn-aumentar-fonte" title="Aumentar Fonte" aria-label="Aumentar tamanho da fonte">A+</button>
+        <button id="btn-alto-contraste" title="Alternar Alto Contraste" aria-label="Alternar modo de alto contraste">
+            <i class="fa-solid fa-circle-half-stroke"></i> Alto Contraste
+        </button>
+    </div>
+
+    <header class="main-header">
+        <div class="header-container">
+            <div class="logo">
+                <i class="fa-solid fa-seedling" aria-hidden="true"></i>
+                <span>EduSolo</span>
+            </div>
+            <nav class="main-nav" aria-label="Navegação Principal">
+                <ul>
+                    <li><a href="#diagnostico">Diagnóstico</a></li>
+                    <li><a href="#simulador">Interatividade</a></li>
+                    <li><a href="#panorama">Panorama</a></li>
+                    <li><a href="#impactos">Impactos</a></li>
+                    <li><a href="#solucoes">Soluções</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main id="conteudo-principal">
+        
+        <section class="hero-section" aria-labelledby="hero-titulo">
+            <div class="hero-container">
+                <div class="hero-content animate-slide-up">
+                    <span class="badge">Ciência Agrícola e Sustentabilidade</span>
+                    <h1 id="hero-titulo">Como alimentar o mundo sem esgotar o solo sob nossos pés?</h1>
+                    <p class="hero-subtitle">A conservação do solo não é apenas uma prática ambiental, é a chave para aumentar a produtividade e garantir o futuro da agricultura global.</p>
+                    <div class="hero-actions">
+                        <a href="#diagnostico" class="btn btn-primary">Entender o Problema</a>
+                        <a href="#solucoes" class="btn btn-secondary">Conhecer Soluções</a>
+                    </div>
+                </div>
+                
+                <div class="hero-gallery animate-fade-in" aria-label="Galeria de Imagens Educativas">
+                    <figure class="gallery-item">
+                        <img src="seca.png" alt="Solo severamente rachado pela seca extrema e falta de manejo adequado.">
+                        <figcaption>Solo degradado pela erosão e escassez de nutrientes.</figcaption>
+                    </figure>
+                    <figure class="gallery-item">
+                        <img src="bom.png" alt="Plantação jovem crescendo de forma saudável em curvas de nível com solo protegido.">
+                        <figcaption>Solo manejado de forma sustentável maximizando o plantio.</figcaption>
+                    </figure>
+                </div>
+            </div>
+        </section>
+
+        <section id="diagnostico" class="section-padding" aria-labelledby="diag-titulo">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 id="diag-titulo">O Diagnóstico: Os Sintomas da Degradação</h2>
+                    <p>Compreender as ameaças ocultas e visíveis que destroem a camada fértil do planeta é o primeiro passo para a mudança.</p>
+                </div>
+                <div id="diagnostico-grid" class="grid-3-col">
+                    </div>
+            </div>
+        </section>
+
+        <section id="simulador" class="interactive-section section-padding" aria-labelledby="sim-titulo">
+            <div class="container">
+                <div class="interactive-card">
+                    <div class="interactive-info">
+                        <span class="badge badge-accent">Laboratório Virtual</span>
+                        <h2 id="sim-titulo">Simulador de Manejo: Teste suas Habilidades de Fazendeiro Sustentável</h2>
+                        <p>Você foi nomeado gestor de uma propriedade agrícola de 500 hectares enfrentando perda severa de produtividade. Escolha suas ações e veja o impacto imediato na saúde do solo e nos seus lucros fictícios.</p>
+                        
+                        <div id="game-container" class="game-box">
+                            <p id="game-scenario" class="game-text"><strong>Cenário Atual:</strong> Sua fazenda sofre com chuvas intensas que lavam a terra (erosão). O que você faz?</p>
+                            <div class="game-choices">
+                                <button class="btn-choice" onclick="jogarSimulador(1)">Deixar o solo exposto e passar o arado fundo</button>
+                                <button class="btn-choice" onclick="jogarSimulador(2)">Implementar curvas de nível e plantio direto</button>
+                            </div>
+                            <div id="game-feedback" class="game-feedback hidden" aria-live="polite"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="panorama" class="section-padding bg-light" aria-labelledby="pano-titulo">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 id="pano-titulo">O Panorama Global em Números</h2>
+                    <p>Dados empíricos que traduzem a urgência da conservação do solo no Brasil e no mundo.</p>
+                </div>
+                <div id="indicators-grid" class="grid-4-col">
+                    </div>
+            </div>
+        </section>
+
+        <section id="impactos" class="section-padding" aria-labelledby="imp-titulo">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2>Impactos da (Não) Conservação</h2>
+                    <p>A perda da saúde do solo gera ondas de choque que vão além do campo.</p>
+                </div>
+                
+                <div class="tabs-container">
+                    <div class="tab-list" role="tablist" aria-label="Perspectivas de Impacto">
+                        <button class="tab-button active" role="tab" aria-selected="true" aria-controls="panel-ambiental" id="tab-ambiental">Ambiental</button>
+                        <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-economico" id="tab-economico" tabindex="-1">Econômico</button>
+                        <button class="tab-button" role="tab" aria-selected="false" aria-controls="panel-social" id="tab-social" tabindex="-1">Social/Cultural</button>
+                    </div>
+
+                    <div class="tab-panel active" id="panel-ambiental" role="tabpanel" aria-labelledby="tab-ambiental">
+                        <h3>Desequilíbrio dos Ecossistemas</h3>
+                        <p>A erosão carrega sedimentos ricos em agrotóxicos para rios e lagos, causando assoreamento e morte de fauna aquática. Além disso, solos degradados perdem a capacidade de estocar carbono, acelerando o aquecimento global.</p>
+                    </div>
+                    <div class="tab-panel" id="panel-economico" role="tabpanel" aria-labelledby="tab-economico" hidden>
+                        <h3>Prejuízos Bilionários e Inflação de Alimentos</h3>
+                        <p>Solos inférteis exigem maior aplicação de insumos químicos caros. A quebra crônica de safras eleva o preço dos alimentos nas cidades e diminui o PIB agrícola do país, impactando a balança comercial.</p>
+                    </div>
+                    <div class="tab-panel" id="panel-social" role="tabpanel" aria-labelledby="tab-social" hidden>
+                        <h3>Êxodo Rural e Insegurança Alimentar</h3>
+                        <p>Famílias de pequenos agricultores perdem seu sustento quando a terra se torna estéril. Isso força migrações em massa para centros urbanos já saturados, destruindo identidades culturais ligadas à ancestralidade do cultivo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="casos" class="section-padding bg-light" aria-labelledby="casos-titulo">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 id="casos-titulo">Casos Reais de Sucesso</h2>
+                    <p>Exemplos práticos de propriedades e regiões que viraram o jogo aplicando a conservação.</p>
+                </div>
+
+                <div class="carousel" role="region" aria-roledescription="carrossel" aria-label="Casos de sucesso">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active" role="group" aria-roledescription="slide" aria-label="1 de 2">
+                            <img src="goias.png" alt="Bela vista aérea de fazenda integrada com florestas e pastos verdes.">
+                            <div class="carousel-caption">
+                                <h3>O Milagre do Sistema ILPF no Cerrado</h3>
+                                <p>Integração Lavoura-Pecuária-Floresta recuperou áreas degradadas em Goiás, triplicando a produção de grãos e carne no mesmo espaço.</p>
+                            </div>
+                        </div>
+                        <div class="carousel-item" role="group" aria-roledescription="slide" aria-label="2 de 2">
+                            <img src="parana.png" alt="Trator aplicando sementes sobre cobertura de palhada seca sem perturbar o solo.">
+                            <div class="carousel-caption">
+                                <h3>Revolução do Plantio Direto nos Campos do Sul</h3>
+                                <p>Agricultores do Paraná reduziram em até 90% as perdas por erosão hídrica ao cessar a aração tradicional e manter a cobertura orgânica.</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <button class="carousel-control prev" aria-label="Slide anterior"><i class="fa-solid fa-chevron-left"></i></button>
+                    <button class="carousel-control next" aria-label="Próximo slide"><i class="fa-solid fa-chevron-right"></i></button>
+                    
+                    <div class="carousel-indicators">
+                        <button class="indicator active" data-slide-to="0" aria-label="Ir para slide 1"></button>
+                        <button class="indicator" data-slide-to="1" aria-label="Ir para slide 2"></button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="multimidia" class="section-padding" aria-labelledby="multi-titulo">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 id="multi-titulo">Espaço Multimídia</h2>
+                    <p>Expanda sua visão com materiais audiovisuais e conteúdos complementares de especialistas.</p>
+                </div>
+                <div class="multimedia-grid">
+                    <div class="video-container">
+                        <iframe src="Base_da_Sobrevivência.mp4" title="Vídeo Educativo: Princípios da Conservação do Solo" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <div class="resources-sidebar">
+                        <h3>Materiais de Apoio</h3>
+                        <ul class="resources-list">
+                            <li>
+                                <i class="fa-solid fa-headphones-simple"></i>
+                                <div>
+                                    <strong>PodSolo - Episódio 12</strong>
+                                    <p>Entrevista com Engenheiros Agrônomos sobre microbiologia do solo.</p>
+                                </div>
+                            </li>
+                            <li>
+                                <i class="fa-solid fa-file-pdf"></i>
+                                <div>
+                                    <strong>Cartilha Embrapa (PDF)</strong>
+                                    <p>Guia definitivo para pequenos produtores sobre adubação verde.</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="solucoes" class="section-padding bg-light" aria-labelledby="sol-titulo">
+            <div class="container">
+                <div class="section-header text-center">
+                    <h2 id="sol-titulo">Estratégias Práticas de Conservação</h2>
+                    <p>Tecnologias e manejos ancestrais retrabalhados pela ciência moderna para salvar nossa fundação produtiva.</p>
+                </div>
+                <div id="solucoes-grid" class="grid-3-col">
+                    </div>
+            </div>
+        </section>
+
+        <section id="faq" class="section-padding" aria-labelledby="faq-titulo">
+            <div class="container text-max-width">
+                <div class="section-header text-center">
+                    <h2 id="faq-titulo">Dúvidas Frequentes</h2>
+                </div>
+                <div class="accordion">
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-1">
+                            <span>O que diferencia o Plantio Direto do cultivo tradicional?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div id="faq-ans-1" class="accordion-body" hidden>
+                            <p>No tradicional, o solo é revirado (arado), quebrando sua estrutura física e matando a biologia. No Plantio Direto, o solo nunca é revirado; as sementes entram direto sob os restos vegetais da safra anterior, mantendo a proteção da terra.</p>
+                        </div>
+                    </div>
+                    <div class="accordion-item">
+                        <button class="accordion-header" aria-expanded="false" aria-controls="faq-ans-2">
+                            <span>Como a rotação de culturas aumenta o lucro do agricultor?</span>
+                            <i class="fa-solid fa-chevron-down"></i>
+                        </button>
+                        <div id="faq-ans-2" class="accordion-body" hidden>
+                            <p>Alternando plantas (como soja e milho) com plantas de cobertura (como braquiária ou crotalária), quebram-se os ciclos de pragas e doenças, economizando muito em defensivos. Além disso, plantas diferentes buscam nutrientes em profundidades diferentes, otimizando o solo.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="reflection-section section-padding" aria-label="Reflexão Final">
+            <div class="container text-center">
+                <div class="reflection-box animate-slide-up">
+                    <h2>E agora, qual é o seu papel nessa engrenagem?</h2>
+                    <p>O solo não é um recurso infinito. Cada decisão de manejo tomada no campo reflete na comida que chega ao prato nas cidades e na estabilidade climática do planeta. Como estudante, cidadão e futuro profissional, você está pronto para defender e disseminar a ciência da conservação agrícola?</p>
+                    <a href="#simulador" class="btn btn-accent">Refazer o Desafio do Simulador</a>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <div class="footer-info">
+                <h3>EduSolo</h3>
+                <p>Plataforma interativa construída para fomento das Metodologias Ativas de Ensino em Ciências Agrárias e Geografia Física.</p>
+            </div>
+            <div class="footer-credits">
+                <p><strong>Desenvolvido por:</strong> Maria Fernanda Procopio Marcelino</p>
+                <p><strong>Créditos de mídia:</strong> Imagens licenciadas sob Unsplash / Dados públicos da Embrapa.</p>
+            </div>
+            <div class="footer-socials">
+                <a href="#" aria-label="Visite nosso Instagram"><i class="fa-brands fa-instagram"></i></a>
+                <a href="#" aria-label="Visite nosso YouTube"><i class="fa-brands fa-youtube"></i></a>
+                <a href="#" aria-label="Contato via E-mail"><i class="fa-solid fa-envelope"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom text-center">
+            <p>&copy; 2026 EduSolo. Desenvolvido para fins estritamente educacionais e acessíveis.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
